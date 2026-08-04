@@ -59,7 +59,7 @@ const SegurancaEticaSection = () => (
             transition={{ duration: 0.5, delay: i * 0.1 }}
             className="group flex gap-6 p-6 sm:p-8 rounded-2xl bg-white hover:shadow-md transition-shadow duration-300"
           >
-            <div className="w-12 h-12 rounded-xl bg-[#F4F3F3] group-hover:bg-[#191919] flex items-center justify-center flex-shrink-0 transition-colors duration-300 mt-0.5">
+            <div className="w-12 h-12 rounded-xl bg-[#F4F3F3] group-hover:bg-brand-accent flex items-center justify-center flex-shrink-0 transition-colors duration-300 mt-0.5">
               <item.icon className="w-6 h-6 text-[#191919] group-hover:text-white transition-colors duration-300" />
             </div>
             <div>
@@ -80,7 +80,7 @@ const SegurancaEticaSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.5, delay: 0.5 }}
-        className="mt-10 p-6 sm:p-8 rounded-2xl border border-[#191919]/10 bg-white text-center"
+        className="mt-10 p-6 sm:p-8 rounded-2xl border border-brand-accent/20 bg-white text-center"
       >
         <p className="text-sm text-[#191919]/50 uppercase tracking-wider mb-2">
           Transparência como princípio

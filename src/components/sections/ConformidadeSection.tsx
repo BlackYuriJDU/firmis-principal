@@ -57,10 +57,10 @@ const ConformidadeSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className={`flex gap-6 p-6 sm:p-8 rounded-2xl ${
+            className={`flex gap-6 p-6 sm:p-8 rounded-2xl border-l-4 ${
               i === 3
-                ? 'bg-[#191919]'
-                : 'bg-[#F4F3F3]'
+                ? 'bg-[#191919] border-brand-accent'
+                : 'bg-[#F4F3F3] border-transparent'
             }`}
           >
             <div
@@ -99,7 +99,7 @@ const ConformidadeSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="mt-12 p-6 sm:p-8 rounded-2xl border border-[#191919]/10 bg-white text-center"
+        className="mt-12 p-6 sm:p-8 rounded-2xl border border-brand-accent/20 bg-white text-center"
       >
         <p className="font-serif text-xl sm:text-2xl text-[#191919] font-normal">
           &ldquo;O IBAPE recomenda o uso de ferramentas especializadas para

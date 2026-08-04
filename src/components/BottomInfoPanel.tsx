@@ -40,7 +40,7 @@ const BottomInfoPanel = () => (
         {FEATURES.map((feat) => (
           <div
             key={feat.num}
-            className="group bg-[#F4F3F3] hover:bg-[#eaeaea] transition-all duration-200 cursor-pointer px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between"
+            className="group bg-[#F4F3F3] hover:bg-brand-accent-subtle transition-all duration-200 cursor-pointer px-4 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between"
           >
             <div className="flex items-center">
               <span className="text-[#191919]/40 text-sm">{feat.num}</span>
@@ -49,7 +49,7 @@ const BottomInfoPanel = () => (
                 {feat.label}
               </span>
             </div>
-            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-gray-700 group-hover:translate-x-0.5 transition-all duration-200 flex-shrink-0" />
+            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-brand-accent group-hover:translate-x-0.5 transition-all duration-200 flex-shrink-0" />
           </div>
         ))}
       </div>

@@ -73,7 +73,7 @@ const ComparativoSection = () => (
                 key={comp.name}
                 className={`border-b border-gray-100 ${
                   comp.name === 'Firmis'
-                    ? 'bg-[#191919]/[0.03]'
+                    ? 'bg-brand-accent-subtle'
                     : ''
                 }`}
               >
@@ -96,7 +96,7 @@ const ComparativoSection = () => (
                 {COLUMNS.map((col) => (
                   <td key={col.key} className="text-center py-4 px-4">
                     {comp[col.key] ? (
-                      <Check className="w-5 h-5 text-[#191919] mx-auto" />
+                      <Check className="w-5 h-5 text-brand-accent mx-auto" />
                     ) : (
                       <Minus className="w-5 h-5 text-gray-300 mx-auto" />
                     )}
@@ -119,7 +119,7 @@ const ComparativoSection = () => (
             transition={{ duration: 0.3, delay: i * 0.06 }}
             className={`rounded-xl p-5 ${
               comp.name === 'Firmis'
-                ? 'bg-[#191919] text-white ring-2 ring-[#191919]'
+                ? 'bg-[#191919] text-white ring-2 ring-[#191919] ring-brand-accent/30'
                 : 'bg-[#F4F3F3]'
             }`}
           >

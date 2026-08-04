@@ -83,12 +83,12 @@ const PrecosSection = () => (
             transition={{ duration: 0.5, delay: i * 0.15 }}
             className={`relative rounded-2xl p-8 sm:p-10 bg-white shadow-sm ${
               tier.highlighted
-                ? 'ring-2 ring-[#191919] shadow-md'
+                ? 'ring-2 ring-brand-accent/50 shadow-md'
                 : 'border border-gray-100'
             }`}
           >
             {tier.highlighted && (
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#191919] text-white text-[11px] font-medium px-4 py-1 rounded-full uppercase tracking-wider">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-accent text-white text-[11px] font-medium px-4 py-1 rounded-full uppercase tracking-wider">
                 Mais popular
               </div>
             )}
@@ -105,7 +105,7 @@ const PrecosSection = () => (
             <ul className="space-y-3 mb-8">
               {tier.features.map((feat) => (
                 <li key={feat} className="flex items-center gap-3 text-sm text-[#191919]/70">
-                  <Check className="w-4 h-4 text-[#191919] flex-shrink-0" />
+                  <Check className="w-4 h-4 text-brand-accent flex-shrink-0" />
                   {feat}
                 </li>
               ))}

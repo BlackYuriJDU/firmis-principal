@@ -52,10 +52,10 @@ const DiferenciaisSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.5, delay: i * 0.1 }}
-            className="group flex gap-6 p-6 sm:p-8 rounded-2xl hover:bg-[#F4F3F3] transition-colors duration-300"
+            className="group flex gap-6 p-6 sm:p-8 rounded-2xl hover:bg-brand-accent-subtle transition-colors duration-300"
             style={{ perspective: '800px' }}
           >
-            <div className="w-12 h-12 rounded-xl bg-[#F4F3F3] group-hover:bg-[#191919] flex items-center justify-center flex-shrink-0 transition-colors duration-300 mt-0.5">
+            <div className="w-12 h-12 rounded-xl bg-[#F4F3F3] group-hover:bg-brand-accent flex items-center justify-center flex-shrink-0 transition-colors duration-300 mt-0.5">
               <feat.icon className="w-6 h-6 text-[#191919] group-hover:text-white transition-colors duration-300" />
             </div>
             <div>

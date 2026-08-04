@@ -36,7 +36,7 @@ const LoginForm = () => {
         animate={{ opacity: 1 }}
         className="w-full max-w-xl space-y-6 text-center"
       >
-        <div className="w-16 h-16 rounded-2xl bg-[#F4F3F3] flex items-center justify-center mx-auto mb-6">
+        <div className="w-16 h-16 rounded-2xl bg-brand-accent-subtle flex items-center justify-center mx-auto mb-6">
           <svg
             width="28"
             height="28"
@@ -46,7 +46,7 @@ const LoginForm = () => {
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="text-[#191919]"
+            className="text-brand-accent"
           >
             <rect x="2" y="4" width="20" height="16" rx="2" />
             <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
@@ -61,7 +61,7 @@ const LoginForm = () => {
         </p>
         <button
           onClick={() => setSent(false)}
-          className="text-sm text-[#191919]/50 hover:text-[#191919] transition-colors mt-4"
+          className="text-sm text-[#191919]/50 hover:text-brand-accent transition-colors mt-4"
         >
           Usar outro e-mail
         </button>
@@ -87,7 +87,7 @@ const LoginForm = () => {
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-1.5">
-          <label className="text-sm font-medium text-[#191919]">
+          <label className="font-mono-label font-medium text-[#191919]">
             E-mail profissional
           </label>
           <input
@@ -96,7 +96,7 @@ const LoginForm = () => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="seu@email.com"
             required
-            className="w-full h-11 px-4 rounded-xl bg-[#F4F3F3] border-none text-[#191919] placeholder:text-[#191919]/20 text-sm focus:outline-none focus:ring-2 focus:ring-[#191919]/20 transition-shadow duration-200"
+            className="w-full border-b border-[#191919]/15 bg-transparent rounded-none py-3 text-[#191919] placeholder:text-[#191919]/20 text-sm outline-none focus:border-brand-accent focus:ring-0 transition-colors duration-200"
           />
         </div>
 
@@ -117,14 +117,14 @@ const LoginForm = () => {
 
       <p className="text-center text-sm text-[#191919]/40">
         Ainda não tem conta?{' '}
-        <a href="/cadastro" className="text-[#191919] font-medium hover:underline">
+        <a href="/cadastro" className="text-brand-accent font-medium hover:underline">
           Cadastre-se
         </a>
       </p>
 
       <p className="text-center text-xs text-[#191919]/30">
         Ao acessar, você concorda com nossa{' '}
-        <a href="/privacidade" className="underline hover:text-[#191919]/50 transition-colors">
+        <a href="/privacidade" className="underline hover:text-brand-accent transition-colors">
           Política de Privacidade
         </a>
         . Seus dados e laudos são processados em ambiente isolado, nos termos da LGPD.

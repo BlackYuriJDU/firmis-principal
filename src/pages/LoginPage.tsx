@@ -6,9 +6,6 @@ const LoginPage = () => (
   <main className="flex min-h-screen w-full bg-white selection:bg-[#191919]/10 p-2 transition-all duration-500 lg:h-screen lg:overflow-hidden lg:p-4">
     {/* Left column — brand */}
     <div className="relative hidden lg:flex flex-col items-center justify-center rounded-3xl overflow-hidden shadow-2xl h-full w-[52%] bg-[#191919]">
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
-      </div>
       <div className="relative z-10 text-center px-12">
         <div className="flex items-center justify-center gap-3 mb-8">
           <svg
@@ -25,6 +22,7 @@ const LoginPage = () => (
             Firmis
           </span>
         </div>
+        <div className="w-16 h-[2px] bg-brand-accent mx-auto mb-8" />
         <h2 className="text-3xl font-serif font-normal text-white/90 leading-tight">
           Laudos técnicos
           <br />

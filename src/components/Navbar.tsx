@@ -36,7 +36,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm text-[#191919]/70 hover:text-[#191919] transition-colors duration-200"
+              className="text-sm text-[#191919]/70 hover:text-brand-accent transition-colors duration-200"
             >
               {link.label}
             </a>
@@ -56,7 +56,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3">
           <Link
             to="/entrar"
-            className="hidden sm:inline px-5 py-2.5 text-[#191919] text-sm font-medium rounded-lg hover:bg-[#F4F3F3] transition-colors duration-200 flex-shrink-0"
+            className="hidden sm:inline px-5 py-2.5 text-[#191919] text-sm font-medium rounded-lg hover:bg-brand-accent-subtle transition-colors duration-200 flex-shrink-0"
           >
             Entrar
           </Link>

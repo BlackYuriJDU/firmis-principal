@@ -14,7 +14,7 @@ const StepItem = ({ number, text, active = false }: StepItemProps) => (
   >
     <span
       className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-medium flex-shrink-0 ${
-        active ? 'bg-white text-[#191919]' : 'bg-[#191919]/10 text-[#191919]/40'
+        active ? 'bg-brand-accent text-white' : 'bg-[#191919]/10 text-[#191919]/40'
       }`}
     >
       {number}

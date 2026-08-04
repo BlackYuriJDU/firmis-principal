@@ -62,10 +62,10 @@ const ComoFuncionaSection = () => (
               e.currentTarget.style.transform = 'rotateY(0deg) rotateX(0deg)'
             }}
           >
-            <div className="w-12 h-12 rounded-xl bg-[#F4F3F3] flex items-center justify-center mb-6 group-hover:bg-[#191919] transition-colors duration-300">
+            <div className="w-12 h-12 rounded-xl bg-[#F4F3F3] flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors duration-300">
               <step.icon className="w-6 h-6 text-[#191919] group-hover:text-white transition-colors duration-300" />
             </div>
-            <div className="text-[11px] font-medium text-[#191919]/40 mb-3">
+            <div className="text-[11px] font-medium text-brand-accent/60 mb-3">
               {step.num}
             </div>
             <h3 className="font-serif text-xl font-normal text-[#191919] mb-3">

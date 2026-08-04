@@ -3,6 +3,12 @@
 @theme {
   --font-family-sans: 'Inter', sans-serif;
   --font-family-serif: 'P22 Mackinac W01 Book', Georgia, serif;
+  --font-family-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --color-brand-accent: #8ECAE6;
+  --color-brand-accent-subtle: #8ECAE626;
+  --color-brand-ink: #191919;
+  --color-brand-white: #FFFFFF;
+  --color-brand-gray: #F4F3F3;
 }
 
 *,
@@ -18,4 +24,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #ffffff;
   color: #191919;
+}
+
+.font-mono-label {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }

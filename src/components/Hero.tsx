@@ -13,7 +13,7 @@ const Hero = () => (
           com fundamento.
         </h1>
         <div className="mt-5 sm:mt-6 md:mt-8 space-y-3">
-          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-[#191919]/40 font-medium bg-[#F4F3F3] px-3 py-1.5 rounded-full">
+          <span className="inline-block text-[11px] uppercase tracking-[0.2em] text-brand-accent font-medium bg-brand-accent-subtle px-3 py-1.5 rounded-full">
             A única plataforma brasileira com IA generativa para laudos
           </span>
           <p className="max-w-sm sm:max-w-md mx-auto text-sm md:text-base text-[#191919]/70 leading-relaxed">

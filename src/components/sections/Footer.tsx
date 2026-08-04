@@ -26,6 +26,7 @@ const COLUMNS = [
 const Footer = () => (
   <footer className="bg-[#191919] text-white py-16 sm:py-20 px-6 sm:px-10 md:px-14">
     <div className="max-w-6xl mx-auto">
+      <div className="h-[2px] bg-gradient-to-r from-transparent via-brand-accent to-transparent mb-12" />
       <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8">
         {/* Brand column */}
         <div className="lg:col-span-1">
@@ -51,7 +52,7 @@ const Footer = () => (
                 <li key={link}>
                   <a
                     href={col.hrefs[i]}
-                    className="text-sm text-white/40 hover:text-white/70 transition-colors duration-200"
+                    className="text-sm text-white/40 hover:text-brand-accent transition-colors duration-200"
                   >
                     {link}
                   </a>

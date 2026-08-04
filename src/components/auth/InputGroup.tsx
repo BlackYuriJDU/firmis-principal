@@ -14,12 +14,12 @@ const InputGroup = ({ label, placeholder, type = 'text', helper }: InputGroupPro
 
   return (
     <div className="space-y-1.5">
-      <label className="text-sm font-medium text-[#191919]">{label}</label>
+      <label className="font-mono-label font-medium text-[#191919]">{label}</label>
       <div className="relative">
         <input
           type={effectiveType}
           placeholder={placeholder}
-          className="w-full h-11 px-4 rounded-xl bg-[#F4F3F3] border-none text-[#191919] placeholder:text-[#191919]/20 text-sm focus:outline-none focus:ring-2 focus:ring-[#191919]/20 transition-shadow duration-200"
+          className="w-full border-b border-[#191919]/15 bg-transparent rounded-none py-3 text-[#191919] placeholder:text-[#191919]/20 text-sm outline-none focus:border-brand-accent focus:ring-0 transition-colors duration-200"
         />
         {isPassword && (
           <button

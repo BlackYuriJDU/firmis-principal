@@ -58,7 +58,7 @@ const SignUpForm = () => (
 
     <p className="text-center text-sm text-[#191919]/40">
       Já tem conta?{' '}
-      <a href="#" className="text-[#191919] font-medium hover:underline">
+      <a href="#" className="text-brand-accent font-medium hover:underline">
         Entrar
       </a>
     </p>

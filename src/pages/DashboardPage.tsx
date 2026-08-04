@@ -108,10 +108,10 @@ const DashboardPage = () => {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="bg-white rounded-2xl p-6 shadow-sm"
+              className="bg-white rounded-2xl p-6 shadow-sm border-l-2 border-brand-accent"
             >
               <div className="w-10 h-10 rounded-xl bg-[#F4F3F3] flex items-center justify-center mb-4">
-                <stat.icon className="w-5 h-5 text-[#191919]" />
+                <stat.icon className="w-5 h-5 text-brand-accent" />
               </div>
               <p className="text-3xl font-serif font-normal text-[#191919] mb-1">
                 {stat.value}
@@ -142,7 +142,7 @@ const DashboardPage = () => {
                 value={crea}
                 onChange={(e) => setCrea(e.target.value)}
                 placeholder="Ex: 1234567890"
-                className="w-full h-11 px-4 rounded-xl bg-[#F4F3F3] border-none text-[#191919] placeholder:text-[#191919]/20 text-sm focus:outline-none focus:ring-2 focus:ring-[#191919]/20 transition-shadow duration-200"
+                className="w-full h-11 px-4 rounded-xl bg-[#F4F3F3] border-none text-[#191919] placeholder:text-[#191919]/20 text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent/30 transition-shadow duration-200"
               />
             </div>
             <div className="space-y-1.5">
@@ -152,7 +152,7 @@ const DashboardPage = () => {
               <select
                 value={uf}
                 onChange={(e) => setUf(e.target.value)}
-                className="w-full h-11 px-4 rounded-xl bg-[#F4F3F3] border-none text-[#191919] text-sm focus:outline-none focus:ring-2 focus:ring-[#191919]/20 transition-shadow duration-200"
+                className="w-full h-11 px-4 rounded-xl bg-[#F4F3F3] border-none text-[#191919] text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent/30 transition-shadow duration-200"
               >
                 <option value="">Selecione...</option>
                 {[
@@ -168,7 +168,11 @@ const DashboardPage = () => {
             </div>
             <button
               type="submit"
-              className="px-6 py-2.5 bg-[#191919] text-white text-sm font-medium rounded-lg hover:bg-[#191919]/90 transition-colors duration-200"
+              className={`px-6 py-2.5 text-white text-sm font-medium rounded-lg transition-colors duration-200 ${
+                saved
+                  ? 'bg-brand-accent hover:bg-brand-accent/90'
+                  : 'bg-[#191919] hover:bg-[#191919]/90'
+              }`}
             >
               {saved ? 'Salvo ✓' : 'Salvar perfil'}
             </button>
@@ -178,7 +182,7 @@ const DashboardPage = () => {
         {/* New laudo CTA */}
         <div className="bg-[#191919] rounded-2xl p-8 sm:p-10 text-center">
           <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mx-auto mb-5">
-            <Plus className="w-7 h-7 text-white" />
+            <Plus className="w-7 h-7 text-brand-accent" />
           </div>
           <h2 className="font-serif text-2xl font-normal text-white mb-3">
             Novo laudo
