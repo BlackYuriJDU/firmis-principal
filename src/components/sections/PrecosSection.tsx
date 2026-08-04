@@ -12,14 +12,18 @@ const TIERS = [
       'IA generativa completa',
       'Citação de normas (NBR)',
       'Memória de cálculo',
+      'Revisão obrigatória antes da ART',
       'Exportação em PDF',
       'Válido por 30 dias',
     ],
+    note: 'O engenheiro é responsável pela revisão e assinatura. A IA auxilia, não substitui.',
+    period: '/laudo',
     highlighted: false,
   },
   {
     name: 'Profissional',
     price: '149',
+    period: '/mês',
     desc: 'Para engenheiros autônomos que emitem laudos regularmente.',
     features: [
       '1 engenheiro',
@@ -34,6 +38,7 @@ const TIERS = [
   {
     name: 'Escritório',
     price: '590',
+    period: '/mês',
     desc: 'Para empresas de engenharia com múltiplos profissionais.',
     features: [
       'Até 5 engenheiros',
@@ -95,7 +100,7 @@ const PrecosSection = () => (
               <span className="text-5xl font-serif font-normal text-[#191919]">
                 R$ {tier.price}
               </span>
-              <span className="text-[#191919]/50 text-sm ml-1">/mês</span>
+              <span className="text-[#191919]/50 text-sm ml-1">{tier.period}</span>
             </div>
             <ul className="space-y-3 mb-8">
               {tier.features.map((feat) => (
@@ -105,6 +110,11 @@ const PrecosSection = () => (
                 </li>
               ))}
             </ul>
+            {'note' in tier && tier.note && (
+              <p className="text-xs text-[#191919]/40 leading-relaxed mb-6 -mt-4 px-1 italic">
+                {tier.note}
+              </p>
+            )}
             <Link
               to="/cadastro"
               className={`block text-center px-6 py-3 rounded-lg text-sm font-medium transition-colors duration-200 ${

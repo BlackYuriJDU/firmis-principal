@@ -121,6 +121,14 @@ const LoginForm = () => {
           Cadastre-se
         </a>
       </p>
+
+      <p className="text-center text-xs text-[#191919]/30">
+        Ao acessar, você concorda com nossa{' '}
+        <a href="/privacidade" className="underline hover:text-[#191919]/50 transition-colors">
+          Política de Privacidade
+        </a>
+        . Seus dados e laudos são processados em ambiente isolado, nos termos da LGPD.
+      </p>
     </motion.div>
   )
 }
