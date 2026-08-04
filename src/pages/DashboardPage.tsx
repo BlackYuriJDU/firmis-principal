@@ -60,9 +60,9 @@ const DashboardPage = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-[#F4F3F3]">
+    <div className="min-h-screen bg-brand-gray">
       {/* Top bar */}
-      <header className="bg-white border-b border-gray-100">
+      <header className="bg-brand-white border-b border-gray-100">
         <div className="max-w-6xl mx-auto px-6 sm:px-10 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Link to="/" className="flex items-center gap-2.5">
@@ -108,9 +108,9 @@ const DashboardPage = () => {
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="bg-white rounded-2xl p-6 shadow-sm border-l-2 border-brand-accent"
+              className="bg-brand-white rounded-2xl p-6 shadow-sm border-l-2 border-brand-accent"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#F4F3F3] flex items-center justify-center mb-4">
+              <div className="w-10 h-10 rounded-xl bg-brand-gray flex items-center justify-center mb-4">
                 <stat.icon className="w-5 h-5 text-brand-accent" />
               </div>
               <p className="text-3xl font-serif font-normal text-[#191919] mb-1">
@@ -122,9 +122,9 @@ const DashboardPage = () => {
         </div>
 
         {/* Profile section */}
-        <div className="bg-white rounded-2xl p-6 sm:p-8 shadow-sm mb-8">
+        <div className="bg-brand-white rounded-2xl p-6 sm:p-8 shadow-sm mb-8">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-10 h-10 rounded-xl bg-[#F4F3F3] flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-brand-gray flex items-center justify-center">
               <User className="w-5 h-5 text-[#191919]" />
             </div>
             <h2 className="font-medium text-lg text-[#191919]">
@@ -142,7 +142,7 @@ const DashboardPage = () => {
                 value={crea}
                 onChange={(e) => setCrea(e.target.value)}
                 placeholder="Ex: 1234567890"
-                className="w-full h-11 px-4 rounded-xl bg-[#F4F3F3] border-none text-[#191919] placeholder:text-[#191919]/20 text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent/30 transition-shadow duration-200"
+                className="w-full h-11 px-4 rounded-xl bg-brand-gray border-none text-[#191919] placeholder:text-[#191919]/20 text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent/30 transition-shadow duration-200"
               />
             </div>
             <div className="space-y-1.5">
@@ -152,7 +152,7 @@ const DashboardPage = () => {
               <select
                 value={uf}
                 onChange={(e) => setUf(e.target.value)}
-                className="w-full h-11 px-4 rounded-xl bg-[#F4F3F3] border-none text-[#191919] text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent/30 transition-shadow duration-200"
+                className="w-full h-11 px-4 rounded-xl bg-brand-gray border-none text-[#191919] text-sm focus:outline-none focus:ring-2 focus:ring-brand-accent/30 transition-shadow duration-200"
               >
                 <option value="">Selecione...</option>
                 {[
@@ -193,7 +193,7 @@ const DashboardPage = () => {
           </p>
           <button
             disabled
-            className="px-6 py-2.5 bg-white text-[#191919] text-sm font-medium rounded-lg opacity-50 cursor-not-allowed"
+            className="px-6 py-2.5 bg-brand-white text-[#191919] text-sm font-medium rounded-lg opacity-50 cursor-not-allowed"
           >
             Em breve
           </button>

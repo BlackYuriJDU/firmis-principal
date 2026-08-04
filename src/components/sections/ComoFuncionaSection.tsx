@@ -1,29 +1,29 @@
 import { motion } from 'motion/react'
-import { Camera, Sparkles, FileCheck } from 'lucide-react'
+import { ClipboardList, ScanSearch, ClipboardPenLine } from 'lucide-react'
 
 const STEPS = [
   {
     num: '01',
-    icon: Camera,
+    icon: ClipboardList,
     title: 'Vistoria em campo',
     desc: 'Capture fotos e registre observações diretamente do celular durante a inspeção técnica.',
   },
   {
     num: '02',
-    icon: Sparkles,
+    icon: ScanSearch,
     title: 'IA gera o laudo',
     desc: 'Nossa IA redige a fundamentação técnica com citação rastreável das NBRs e resoluções aplicáveis.',
   },
   {
     num: '03',
-    icon: FileCheck,
+    icon: ClipboardPenLine,
     title: 'Revisão e assinatura',
     desc: 'Revise o laudo gerado, faça ajustes se necessário e registre a ART no CREA com um clique.',
   },
 ]
 
 const ComoFuncionaSection = () => (
-  <section id="produto" className="py-24 sm:py-32 px-6 sm:px-10 md:px-14 bg-[#F4F3F3]">
+  <section id="produto" className="py-24 sm:py-32 px-6 sm:px-10 md:px-14 bg-brand-gray">
     <div className="max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -50,7 +50,7 @@ const ComoFuncionaSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.5, delay: i * 0.15 }}
-            className="group bg-white rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow duration-300"
+            className="group bg-brand-white rounded-2xl p-8 sm:p-10 shadow-sm hover:shadow-md transition-shadow duration-300"
             style={{ perspective: '1000px' }}
             onMouseMove={(e) => {
               const rect = e.currentTarget.getBoundingClientRect()
@@ -62,7 +62,7 @@ const ComoFuncionaSection = () => (
               e.currentTarget.style.transform = 'rotateY(0deg) rotateX(0deg)'
             }}
           >
-            <div className="w-12 h-12 rounded-xl bg-[#F4F3F3] flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors duration-300">
+            <div className="w-12 h-12 rounded-xl bg-brand-gray flex items-center justify-center mb-6 group-hover:bg-brand-accent transition-colors duration-300">
               <step.icon className="w-6 h-6 text-[#191919] group-hover:text-white transition-colors duration-300" />
             </div>
             <div className="text-[11px] font-medium text-brand-accent/60 mb-3">

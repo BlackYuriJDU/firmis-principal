@@ -3,8 +3,8 @@ import Logo from '../Logo'
 const COLUMNS = [
   {
     title: 'Produto',
-    links: ['Como funciona', 'Diferenciais', 'Comparativo', 'Preços'],
-    hrefs: ['#produto', '#solucoes', '#comparativo', '#precos'],
+    links: ['Como funciona', 'Diferenciais', 'Validação', 'Planos', 'Preços'],
+    hrefs: ['#produto', '#solucoes', '#validacao', '/plan', '#precos'],
   },
   {
     title: 'Soluções',

@@ -16,7 +16,6 @@ const TIERS = [
       'Exportação em PDF',
       'Válido por 30 dias',
     ],
-    note: 'O engenheiro é responsável pela revisão e assinatura. A IA auxilia, não substitui.',
     period: '/laudo',
     highlighted: false,
   },
@@ -53,7 +52,7 @@ const TIERS = [
 ]
 
 const PrecosSection = () => (
-  <section id="precos" className="py-24 sm:py-32 px-6 sm:px-10 md:px-14 bg-[#F4F3F3]">
+  <section id="precos" className="py-24 sm:py-32 px-6 sm:px-10 md:px-14 bg-brand-gray">
     <div className="max-w-4xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -81,7 +80,7 @@ const PrecosSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.5, delay: i * 0.15 }}
-            className={`relative rounded-2xl p-8 sm:p-10 bg-white shadow-sm ${
+            className={`relative rounded-2xl p-8 sm:p-10 bg-brand-white shadow-sm flex flex-col h-full ${
               tier.highlighted
                 ? 'ring-2 ring-brand-accent/50 shadow-md'
                 : 'border border-gray-100'
@@ -110,17 +109,12 @@ const PrecosSection = () => (
                 </li>
               ))}
             </ul>
-            {'note' in tier && tier.note && (
-              <p className="text-xs text-[#191919]/40 leading-relaxed mb-6 -mt-4 px-1 italic">
-                {tier.note}
-              </p>
-            )}
             <Link
               to="/cadastro"
-              className={`block text-center px-6 py-3 rounded-lg text-sm font-medium transition-colors duration-200 ${
+              className={`block text-center px-6 py-3 rounded-lg text-sm font-medium transition-colors duration-200 mt-auto ${
                 tier.highlighted
                   ? 'bg-[#191919] text-white hover:bg-[#191919]/90'
-                  : 'bg-[#F4F3F3] text-[#191919] hover:bg-[#eaeaea]'
+                  : 'bg-brand-gray text-[#191919] hover:bg-[#E6E2DC]'
               }`}
             >
               Começar agora
@@ -128,6 +122,11 @@ const PrecosSection = () => (
           </motion.div>
         ))}
       </div>
+
+      <p className="text-center text-xs text-[#191919]/40 mt-8 max-w-lg mx-auto leading-relaxed">
+        Todos os planos exigem responsabilidade técnica do engenheiro conforme Lei 5.194/1966.
+        A IA é ferramenta de apoio — a revisão e assinatura são sempre do profissional.
+      </p>
     </div>
   </section>
 )

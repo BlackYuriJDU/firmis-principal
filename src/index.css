@@ -7,8 +7,8 @@
   --color-brand-accent: #8ECAE6;
   --color-brand-accent-subtle: #8ECAE626;
   --color-brand-ink: #191919;
-  --color-brand-white: #FFFFFF;
-  --color-brand-gray: #F4F3F3;
+  --color-brand-white: #FAF9F6;
+  --color-brand-gray: #F1EFEB;
 }
 
 *,
@@ -22,7 +22,7 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #ffffff;
+  background: #FAF9F6;
   color: #191919;
 }
 

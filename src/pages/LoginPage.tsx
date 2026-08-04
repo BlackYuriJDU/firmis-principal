@@ -3,9 +3,9 @@ import Logo from '../components/Logo'
 import { Link } from 'react-router-dom'
 
 const LoginPage = () => (
-  <main className="flex min-h-screen w-full bg-white selection:bg-[#191919]/10 p-2 transition-all duration-500 lg:h-screen lg:overflow-hidden lg:p-4">
+  <main className="flex min-h-screen w-full bg-brand-white selection:bg-[#191919]/10 p-2 transition-all duration-500 lg:h-screen lg:overflow-hidden lg:p-4">
     {/* Left column — brand */}
-    <div className="relative hidden lg:flex flex-col items-center justify-center rounded-3xl overflow-hidden shadow-2xl h-full w-[52%] bg-[#191919]">
+    <div className="relative hidden lg:flex flex-col items-center justify-center rounded-3xl overflow-hidden shadow-2xl h-full w-[52%] bg-gradient-to-br from-[#191919] via-[#191919] to-brand-accent/10">
       <div className="relative z-10 text-center px-12">
         <div className="flex items-center justify-center gap-3 mb-8">
           <svg

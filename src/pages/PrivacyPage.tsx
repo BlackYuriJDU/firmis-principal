@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import Footer from '../components/sections/Footer'
 
 const PrivacyPage = () => (
-  <div className="min-h-screen bg-white">
+  <div className="min-h-screen bg-brand-white">
     <div className="max-w-3xl mx-auto pt-32 pb-24 px-6 sm:px-10">
       <Link
         to="/"

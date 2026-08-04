@@ -4,7 +4,8 @@ import Logo from './Logo'
 
 const NAV_LINKS = [
   { label: 'Produto', href: '/#produto' },
-  { label: 'Comparativo', href: '/#comparativo' },
+  { label: 'Validação', href: '/#validacao' },
+  { label: 'Planos', href: '/plan' },
   { label: 'Preços', href: '/#precos' },
   { label: 'Segurança', href: '/#seguranca' },
 ]
@@ -18,7 +19,7 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 px-6 sm:px-10 md:px-14 py-4 sm:py-5 flex items-center justify-between ${
-        isDashboard ? 'bg-white border-b border-gray-100' : ''
+        isDashboard ? 'bg-brand-white border-b border-gray-100' : ''
       }`}
     >
       {/* Logo + wordmark */}

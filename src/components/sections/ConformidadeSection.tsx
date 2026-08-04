@@ -25,7 +25,7 @@ const ITEMS = [
 ]
 
 const ConformidadeSection = () => (
-  <section id="empresa" className="py-24 sm:py-32 px-6 sm:px-10 md:px-14 bg-white">
+  <section id="empresa" className="py-24 sm:py-32 px-6 sm:px-10 md:px-14 bg-brand-white">
     <div className="max-w-4xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
@@ -60,12 +60,12 @@ const ConformidadeSection = () => (
             className={`flex gap-6 p-6 sm:p-8 rounded-2xl border-l-4 ${
               i === 3
                 ? 'bg-[#191919] border-brand-accent'
-                : 'bg-[#F4F3F3] border-transparent'
+                : 'bg-brand-gray border-transparent'
             }`}
           >
             <div
               className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                i === 3 ? 'bg-white/10' : 'bg-white'
+                i === 3 ? 'bg-white/10' : 'bg-brand-white'
               }`}
             >
               <item.icon
@@ -99,7 +99,7 @@ const ConformidadeSection = () => (
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.5, delay: 0.4 }}
-        className="mt-12 p-6 sm:p-8 rounded-2xl border border-brand-accent/20 bg-white text-center"
+        className="mt-12 p-6 sm:p-8 rounded-2xl border border-brand-accent/20 bg-brand-white text-center"
       >
         <p className="font-serif text-xl sm:text-2xl text-[#191919] font-normal">
           &ldquo;O IBAPE recomenda o uso de ferramentas especializadas para

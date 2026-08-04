@@ -9,6 +9,7 @@ import DashboardPage from './pages/DashboardPage'
 import PrivacyPage from './pages/PrivacyPage'
 import TermsPage from './pages/TermsPage'
 import LgpdPage from './pages/LgpdPage'
+import PlanPage from './pages/PlanPage'
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/privacidade" element={<PrivacyPage />} />
           <Route path="/termos" element={<TermsPage />} />
           <Route path="/lgpd" element={<LgpdPage />} />
+          <Route path="/plan" element={<PlanPage />} />
         </Routes>
       </AuthProvider>
     </BrowserRouter>
