@@ -3,23 +3,23 @@ import Logo from '../Logo'
 const COLUMNS = [
   {
     title: 'Produto',
-    links: ['Como funciona', 'Diferenciais', 'Preços', 'Conformidade'],
-    hrefs: ['#produto', '#solucoes', '#precos', '#empresa'],
+    links: ['Como funciona', 'Diferenciais', 'Comparativo', 'Preços'],
+    hrefs: ['#produto', '#solucoes', '#comparativo', '#precos'],
   },
   {
     title: 'Soluções',
     links: ['Inspeção Predial', 'Laudo Estrutural', 'ART/RRT', 'App de Campo'],
-    hrefs: ['#', '#', '#', '#'],
+    hrefs: ['#produto', '#produto', '#produto', '#produto'],
   },
   {
     title: 'Empresa',
-    links: ['Sobre', 'Blog', 'Carreiras', 'Contato'],
-    hrefs: ['#', '#', '#', '#'],
+    links: ['Conformidade', 'Segurança e Ética', 'Contato'],
+    hrefs: ['#empresa', '#seguranca', 'mailto:contato@firmis.vercel.app'],
   },
   {
     title: 'Legal',
-    links: ['Privacidade', 'Termos de Uso', 'LGPD', 'Confea'],
-    hrefs: ['#', '#', '#', '#'],
+    links: ['Privacidade', 'Termos de Uso', 'LGPD'],
+    hrefs: ['/privacidade', '/termos', '/lgpd'],
   },
 ]
 

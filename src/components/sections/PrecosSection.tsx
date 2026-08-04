@@ -4,6 +4,20 @@ import { Link } from 'react-router-dom'
 
 const TIERS = [
   {
+    name: 'Avulso',
+    price: '79',
+    desc: 'Para quem precisa de um laudo eventual.',
+    features: [
+      '1 laudo por compra',
+      'IA generativa completa',
+      'Citação de normas (NBR)',
+      'Memória de cálculo',
+      'Exportação em PDF',
+      'Válido por 30 dias',
+    ],
+    highlighted: false,
+  },
+  {
     name: 'Profissional',
     price: '149',
     desc: 'Para engenheiros autônomos que emitem laudos regularmente.',
@@ -15,7 +29,7 @@ const TIERS = [
       'Assinatura digital',
       'Suporte por e-mail',
     ],
-    highlighted: false,
+    highlighted: true,
   },
   {
     name: 'Escritório',
@@ -29,7 +43,7 @@ const TIERS = [
       'Relatórios de equipe',
       'Suporte prioritário',
     ],
-    highlighted: true,
+    highlighted: false,
   },
 ]
 
@@ -54,7 +68,7 @@ const PrecosSection = () => (
         </p>
       </motion.div>
 
-      <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto">
+      <div className="grid md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
         {TIERS.map((tier, i) => (
           <motion.div
             key={tier.name}

@@ -3,9 +3,9 @@ import Logo from './Logo'
 
 const NAV_LINKS = [
   { label: 'Produto', href: '#produto' },
-  { label: 'Soluções', href: '#solucoes' },
+  { label: 'Comparativo', href: '#comparativo' },
   { label: 'Preços', href: '#precos' },
-  { label: 'Empresa', href: '#empresa' },
+  { label: 'Segurança', href: '#seguranca' },
 ]
 
 const Navbar = () => (

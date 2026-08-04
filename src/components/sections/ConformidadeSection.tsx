@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { Scale, FileText, AlertTriangle } from 'lucide-react'
+import { Scale, FileText, AlertTriangle, Gavel } from 'lucide-react'
 
 const ITEMS = [
   {
@@ -16,6 +16,11 @@ const ITEMS = [
     icon: AlertTriangle,
     title: 'IA é ferramenta de apoio',
     desc: 'Nenhuma resolução do Confea proíbe o uso de IA. Mas o engenheiro assume 100% da responsabilidade ao assinar. A Firmis foi projetada com isso em mente.',
+  },
+  {
+    icon: Gavel,
+    title: 'Precedentes que inspiram cautela',
+    desc: 'CREA-RS foi condenado por litigância de má-fé após usar IA que alucinou (2024). TJSP anulou perícias baseadas em SisDEA sem memória de cálculo demonstrável. A rastreabilidade da Firmis existe para proteger você destes riscos.',
   },
 ]
 
@@ -52,14 +57,36 @@ const ConformidadeSection = () => (
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 0.4, delay: i * 0.1 }}
-            className="flex gap-6 p-6 sm:p-8 rounded-2xl bg-[#F4F3F3]"
+            className={`flex gap-6 p-6 sm:p-8 rounded-2xl ${
+              i === 3
+                ? 'bg-[#191919]'
+                : 'bg-[#F4F3F3]'
+            }`}
           >
-            <div className="w-10 h-10 rounded-lg bg-white flex items-center justify-center flex-shrink-0">
-              <item.icon className="w-5 h-5 text-[#191919]" />
+            <div
+              className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                i === 3 ? 'bg-white/10' : 'bg-white'
+              }`}
+            >
+              <item.icon
+                className={`w-5 h-5 ${
+                  i === 3 ? 'text-white' : 'text-[#191919]'
+                }`}
+              />
             </div>
             <div>
-              <h3 className="font-medium text-[#191919] mb-2">{item.title}</h3>
-              <p className="text-sm text-[#191919]/60 leading-relaxed">
+              <h3
+                className={`font-medium mb-2 ${
+                  i === 3 ? 'text-white' : 'text-[#191919]'
+                }`}
+              >
+                {item.title}
+              </h3>
+              <p
+                className={`text-sm leading-relaxed ${
+                  i === 3 ? 'text-white/70' : 'text-[#191919]/60'
+                }`}
+              >
                 {item.desc}
               </p>
             </div>
