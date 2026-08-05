@@ -14,12 +14,11 @@ const Navbar = () => {
   const { user } = useAuth()
   const location = useLocation()
   const isHome = location.pathname === '/'
-  const isDashboard = location.pathname === '/dashboard'
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 px-6 sm:px-10 md:px-14 py-4 sm:py-5 flex items-center justify-between ${
-        isDashboard ? 'bg-brand-white border-b border-gray-100' : ''
+      className={`fixed top-0 left-0 right-0 z-50 px-6 sm:px-10 md:px-14 py-4 sm:py-5 flex items-center justify-between bg-brand-white/90 backdrop-blur-sm ${
+        !isHome ? 'border-b border-gray-100' : ''
       }`}
     >
       {/* Logo + wordmark */}
@@ -30,7 +29,7 @@ const Navbar = () => {
         </span>
       </Link>
 
-      {/* Center links — only on landing page, hidden on other pages */}
+      {/* Center links — only on landing page */}
       {isHome && (
         <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {NAV_LINKS.map((link) => (
@@ -65,7 +64,7 @@ const Navbar = () => {
             to="/cadastro"
             className="px-5 py-2.5 bg-[#191919] text-white text-sm font-medium rounded-lg hover:bg-[#191919]/90 transition-colors duration-200 flex-shrink-0"
           >
-            Solicitar Demonstração
+            Cadastre-se
           </Link>
         </div>
       )}

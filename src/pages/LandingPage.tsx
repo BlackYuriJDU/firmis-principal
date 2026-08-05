@@ -8,7 +8,7 @@ import ConformidadeSection from '../components/sections/ConformidadeSection'
 import Footer from '../components/sections/Footer'
 
 const LandingPage = () => (
-  <div className="min-h-screen bg-brand-white overflow-x-hidden">
+  <div className="min-h-dvh bg-brand-white">
     <Hero />
     <ComoFuncionaSection />
     <DiferenciaisSection />

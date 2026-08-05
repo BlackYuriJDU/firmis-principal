@@ -1,10 +1,13 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
-import { supabase } from '../../lib/supabase'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../../contexts/AuthContext'
 
 const LoginForm = () => {
+  const { signInWithPassword } = useAuth()
+  const navigate = useNavigate()
   const [email, setEmail] = useState('')
-  const [sent, setSent] = useState(false)
+  const [password, setPassword] = useState('')
   const [error, setError] = useState('')
   const [loading, setLoading] = useState(false)
 
@@ -13,60 +16,21 @@ const LoginForm = () => {
     setError('')
     setLoading(true)
 
-    const { error } = await supabase.auth.signInWithOtp({
-      email,
-      options: {
-        emailRedirectTo: `${window.location.origin}/dashboard`,
-      },
-    })
+    const { error } = await signInWithPassword(email, password)
 
     setLoading(false)
 
     if (error) {
-      setError(error.message)
+      if (error.message.includes('Invalid login credentials')) {
+        setError('E-mail ou senha inválidos.')
+      } else if (error.message.includes('Email not confirmed')) {
+        setError('E-mail não confirmado. Verifique sua caixa de entrada.')
+      } else {
+        setError(error.message)
+      }
     } else {
-      setSent(true)
+      navigate('/dashboard')
     }
-  }
-
-  if (sent) {
-    return (
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="w-full max-w-xl space-y-6 text-center"
-      >
-        <div className="w-16 h-16 rounded-2xl bg-brand-accent-subtle flex items-center justify-center mx-auto mb-6">
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="text-brand-accent"
-          >
-            <rect x="2" y="4" width="20" height="16" rx="2" />
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-          </svg>
-        </div>
-        <h2 className="font-serif text-2xl font-normal text-[#191919]">
-          Link enviado!
-        </h2>
-        <p className="text-sm text-[#191919]/60 max-w-sm mx-auto">
-          Enviamos um link de acesso para <strong>{email}</strong>. Clique no
-          link do e-mail para acessar sua conta.
-        </p>
-        <button
-          onClick={() => setSent(false)}
-          className="text-sm text-[#191919]/50 hover:text-brand-accent transition-colors mt-4"
-        >
-          Usar outro e-mail
-        </button>
-      </motion.div>
-    )
   }
 
   return (
@@ -81,7 +45,7 @@ const LoginForm = () => {
           Acessar plataforma
         </h1>
         <p className="text-[#191919]/40 text-sm mt-1">
-          Digite seu e-mail para receber um link de acesso.
+          Entre com seu e-mail e senha.
         </p>
       </div>
 
@@ -96,8 +60,33 @@ const LoginForm = () => {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="seu@email.com"
             required
+            autoComplete="email"
             className="w-full border-b border-[#191919]/15 bg-transparent rounded-none py-3 text-[#191919] placeholder:text-[#191919]/20 text-sm outline-none focus:border-brand-accent focus:ring-0 transition-colors duration-200"
           />
+        </div>
+
+        <div className="space-y-1.5">
+          <label className="font-mono-label font-medium text-[#191919]">
+            Senha
+          </label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Sua senha"
+            required
+            autoComplete="current-password"
+            className="w-full border-b border-[#191919]/15 bg-transparent rounded-none py-3 text-[#191919] placeholder:text-[#191919]/20 text-sm outline-none focus:border-brand-accent focus:ring-0 transition-colors duration-200"
+          />
+        </div>
+
+        <div className="flex justify-end">
+          <a
+            href="/recuperar-senha"
+            className="text-xs text-[#191919]/40 hover:text-brand-accent transition-colors"
+          >
+            Esqueceu a senha?
+          </a>
         </div>
 
         {error && (
@@ -108,10 +97,10 @@ const LoginForm = () => {
 
         <button
           type="submit"
-          disabled={loading || !email}
+          disabled={loading || !email || !password}
           className="w-full h-14 bg-[#191919] text-white font-semibold rounded-xl hover:bg-[#191919]/90 active:scale-[0.98] transition-all duration-200 mt-2 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {loading ? 'Enviando link...' : 'Enviar link de acesso'}
+          {loading ? 'Entrando...' : 'Entrar'}
         </button>
       </form>
 

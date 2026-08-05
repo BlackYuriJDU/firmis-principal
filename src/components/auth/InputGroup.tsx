@@ -5,21 +5,55 @@ interface InputGroupProps {
   placeholder: string
   type?: string
   helper?: string
+  value: string
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+  name: string
+  id?: string
+  required?: boolean
+  error?: string
+  autoComplete?: string
 }
 
-const InputGroup = ({ label, placeholder, type = 'text', helper }: InputGroupProps) => {
+const InputGroup = ({
+  label,
+  placeholder,
+  type = 'text',
+  helper,
+  value,
+  onChange,
+  name,
+  id,
+  required = false,
+  error,
+  autoComplete,
+}: InputGroupProps) => {
   const [showPassword, setShowPassword] = useState(false)
   const isPassword = type === 'password'
   const effectiveType = isPassword ? (showPassword ? 'text' : 'password') : type
 
   return (
     <div className="space-y-1.5">
-      <label className="font-mono-label font-medium text-[#191919]">{label}</label>
+      <label
+        htmlFor={id || name}
+        className="font-mono-label font-medium text-[#191919]"
+      >
+        {label}
+      </label>
       <div className="relative">
         <input
+          id={id || name}
+          name={name}
           type={effectiveType}
+          value={value}
+          onChange={onChange}
           placeholder={placeholder}
-          className="w-full border-b border-[#191919]/15 bg-transparent rounded-none py-3 text-[#191919] placeholder:text-[#191919]/20 text-sm outline-none focus:border-brand-accent focus:ring-0 transition-colors duration-200"
+          required={required}
+          autoComplete={autoComplete}
+          className={`w-full border-b bg-transparent rounded-none py-3 text-[#191919] placeholder:text-[#191919]/20 text-sm outline-none focus:ring-0 transition-colors duration-200 ${
+            error
+              ? 'border-red-400 focus:border-red-500'
+              : 'border-[#191919]/15 focus:border-brand-accent'
+          }`}
         />
         {isPassword && (
           <button
@@ -43,7 +77,10 @@ const InputGroup = ({ label, placeholder, type = 'text', helper }: InputGroupPro
           </button>
         )}
       </div>
-      {helper && (
+      {error && (
+        <p className="text-xs text-red-500">{error}</p>
+      )}
+      {helper && !error && (
         <p className="text-xs text-[#191919]/40">{helper}</p>
       )}
     </div>

@@ -76,7 +76,7 @@ const FAQ = [
 ]
 
 const PlanPage = () => (
-  <div className="min-h-screen bg-brand-white">
+  <div className="min-h-dvh bg-brand-white">
     {/* Hero */}
     <section className="pt-28 sm:pt-36 pb-16 sm:pb-20 px-6 sm:px-10 md:px-14">
       <div className="max-w-4xl mx-auto text-center">
@@ -102,7 +102,7 @@ const PlanPage = () => (
 
     {/* Plan cards */}
     <section className="pb-24 sm:pb-32 px-6 sm:px-10 md:px-14">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-6 md:gap-8">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
         {TIERS.map((tier, i) => (
           <motion.div
             key={tier.name}
@@ -145,7 +145,7 @@ const PlanPage = () => (
             {tier.href.startsWith('mailto:') ? (
               <a
                 href={tier.href}
-                className={`block text-center px-6 py-3 rounded-lg text-sm font-medium transition-colors duration-200 mt-auto ${
+                className={`block text-center px-6 py-4 rounded-lg text-sm font-medium transition-colors duration-200 mt-auto ${
                   tier.highlighted
                     ? 'bg-brand-ink text-white hover:bg-brand-ink/90'
                     : 'bg-brand-ink text-white hover:bg-brand-ink/90'
@@ -159,7 +159,7 @@ const PlanPage = () => (
             ) : (
               <Link
                 to={tier.href}
-                className={`block text-center px-6 py-3 rounded-lg text-sm font-medium transition-colors duration-200 mt-auto ${
+                className={`block text-center px-6 py-4 rounded-lg text-sm font-medium transition-colors duration-200 mt-auto ${
                   tier.highlighted
                     ? 'bg-brand-ink text-white hover:bg-brand-ink/90'
                     : 'bg-brand-ink text-white hover:bg-brand-ink/90'
